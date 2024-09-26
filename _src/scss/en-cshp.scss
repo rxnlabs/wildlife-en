@@ -1,0 +1,369 @@
+@import "node_modules/bourbon/app/assets/stylesheets/bourbon";
+@import "node_modules/include-media/dist/include-media";
+@import "variables";
+@import "mixins";
+@import "en-components";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$green: #5E9732;
+$orange: #C35E29;
+$gray: #f0f0f0;
+$roboto: 'Roboto', sans-serif;
+$brown: #605a54;
+
+/* General styling */
+
+body {
+	margin: 0 20px 0 20px;
+	font-family: $roboto;
+	color: $brown;
+	overflow-x: hidden;
+}
+
+.en__field__label {
+	font-weight: 900;
+}
+
+input, textarea {
+	font-family: $roboto;
+	font-size: 16px;
+	color: $brown !important;
+}
+
+input.en__field__input--text {
+	width: 350px;
+}
+
+p {
+	line-height: 1.5;
+}
+
+h1 {
+	font-weight: 700;
+	color: $orange;
+	margin-top: 0 !important;
+}
+
+.personalize {
+	color: $green;
+}
+
+a {
+	color: $orange;
+	text-decoration: none !important;
+	font-weight: 700;
+}
+
+a:hover {
+	text-decoration: underline !important;
+}
+
+/* Progress bar */
+
+.enWidget--progressBar {
+	padding-top: 10px !important;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.enWidget__progress {
+	width: 90% !important;
+}
+
+.count-text {
+	margin-top: -1.5px;
+	text-align: center;
+}
+
+/* Header */
+
+header {
+	width: 100vw !important;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	background-color: $brown;
+	border-bottom: 7px solid $orange;
+	padding-bottom: 10px;
+	box-shadow: inset 0 0 80px 0 rgba(0, 0, 0, 0.3);
+
+		img {
+			max-height: 100px;
+			width: auto;
+			margin-bottom: 5px;
+			height: auto;
+			padding-left: 5%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+}
+
+/* Footer */
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+footer {
+	width: 100vw !important;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	background-color: $brown;
+	border-top: 7px solid $orange;
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	box-shadow: inset 0 0 80px 0 rgba(0, 0, 0, 0.3);
+	display: block;
+	z-index: 99;
+
+	p, a {
+		color: #fff !important;
+	}
+}
+
+.en__field--opt-in .en__field__label:first-child {
+	display: none !important;
+}
+
+.en__component.en__component--imageblock {
+	text-align: center;
+	display: block;
+	width: 90%;
+
+	img {
+		max-width: 400px;
+		height: auto !important;
+		padding: 15px;
+	}
+}
+
+.en__field--country .en__field__element.en__field__element--select {
+	display: inline !important;
+}
+
+/* Hero */
+
+#hero {
+    max-height: 325px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: $orange;
+    border-bottom: 7px solid $orange;
+
+    img {
+    	max-height: 325px;
+    	width: 100%;
+    }
+}
+
+/* Email to Target */
+
+.en__component .en__component--copyblock {
+	max-width: 90%;
+}
+
+.en__component.en__component--page {
+	padding: 30px 50px 30px 50px;
+	min-height: 56%;
+}
+
+.en__contact__toggle, .en__contactDetails__rows {
+	display: none !important;
+}
+
+div.en__component.en__component.en__component--column.en__component--column--2 {
+	background-color: $gray;
+	padding: 20px 50px 20px 50px;
+	border: 10px;
+	border-radius: 10px;
+}
+
+.en__component.en__component--contactblock, .en__contact__detail {
+	background-color: $gray !important;
+}
+
+.en__contact__detail {
+	margin: 0 !important;
+}
+
+.en__contactSubject, .en__contactMessage {
+	padding-top: 0 !important;
+}
+
+.en__contact__detail {
+	padding: 0 !important;
+}
+
+.en__contactSubject {
+	margin-bottom: 5px;
+}
+
+.en__component--contactblock {
+	padding: 0 !important;
+}
+
+.en__component.en__component--formblock {
+	padding-top: 20px;
+}
+
+
+.en__field--country.en__mandatory .en__field__element.en__field__element--select {
+
+	select {
+		border: 1px solid #ccc;
+		font-size: 16px;
+		height: 34px;
+		width: 350px;
+	}
+}
+
+.en__submit {
+	text-align: center;
+}
+
+button {
+	font-family: $roboto;
+	background-color: $green;
+    color: #fff;
+    font-size: 20px;
+    border: solid 1px $brown;
+    width: 60%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+    
+button:hover {
+    background-color: $orange;
+    -webkit-transition: background 0.3s;
+}
+
+/* Thank you page */
+
+div.en__component.en__component--codeblock {
+	text-align: center;
+
+	.donate {
+		width: 30% !important;
+		margin-top: 20px;
+	}
+}
+
+.en__component.en__component--socialblock {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.facebook-share-disclaimer {
+	margin-top: -35px;
+	font-size: 13px;
+}
+
+/* Mobile */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 750px) {
+
+  	header img {
+  		max-height: 200px;
+  		padding-top: 30px;
+  		padding-bottom: 30px;
+  	}
+
+  	input.en__field__input--text {
+  		width: 80%;
+  	}
+
+  	.en__field__input--text, .en__contactMessage__plainText, .en__field__input--select {
+  		font-size: 40px !important;
+  	}
+
+  	.en__field__element.en__field__element--select select {
+  		height: 80px !important;
+  	}
+
+  	.en__field__label {
+  		font-size: 40px !important;
+  	}
+
+  	.en__field__input--checkbox {
+  		width: 50px;
+  		height: 50px;
+  	}
+
+  	.en__contactSubject__field {
+  		width: 100% !important;
+  	}
+
+  	.en__field--checkbox .en__field__label {
+		display: inline;
+		padding: 5px;
+	}
+
+	header {
+		text-align: center !important;
+	}
+
+	.en__submit {
+		margin-top: 20px;
+	}
+
+	div.en__component.en__component.en__component--column.en__component--column--2 {
+		margin-top: 40px !important;
+	}
+
+	button {
+		font-size: 40px !important;
+	}
+
+	p, ul, li {
+		font-size: 40px !important;
+	}
+
+	h1 {
+		font-size: 60px !important;
+	}
+
+	h2 {
+		font-size: 55px !important;
+	}
+
+	h3 {
+		font-size: 50px !important;
+	}
+
+	.pageImage {
+		float: none !important;
+		width: 600px !important;
+	}
+
+	.en__component.en__component--imageblock img {
+		max-width: 600px !important;
+	}
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+	.en__component--row--2 .en__component--column {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1000px) {
+  	input.en__field__input--text {
+  		width: 100%;
+  	}
+  }

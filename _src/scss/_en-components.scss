@@ -1,0 +1,93 @@
+/* Engaging Network Components Styles*/
+
+.en__component--copyblock {
+
+	// by default, add a clearfix to copy elements
+	&:not(.float) {
+		@include clearfix;
+	}
+}
+
+// by default, we're expecting the second column in a row to contain the actual form fields
+.en__component--column--2 {
+	background-color: #fff;
+	padding: unquote('20px *');
+
+	> .en__component {
+		margin: unquote('* 20px');
+	}
+}
+
+// by default, hide the credit card type dropdown that's required for EN forms. We're gonna use javaScript to determine the credit card tupe based on the pattern
+.en__field--paymenttype {
+	display: none;
+}
+
+.en__field__element {
+	display: block!important;
+}
+
+.en__field__input--select {
+	min-width: inherit!important;
+}
+
+@mixin encolumn1($context: '') {
+	#{$context} .en__component--column--1 {
+		@content;
+	}
+}
+
+@mixin encolumn2($context: '') {
+	#{$context} .en__component--column--2 {
+		@content;
+	}
+}
+
+@mixin enrow1($context: '') {
+	#{$context} .en__component--row--1 {
+		@content;
+	}
+}
+
+@mixin enrow2($context: '') {
+	#{$context} .en__component--row--2 {
+		@content;
+	}
+}
+
+// styles to be applied to a Engaging Form copy block
+@mixin encopy($context: '') {
+	#{$context} .en__component--copyblock {
+		@content;
+	}
+}
+
+// styles to be applied to a Engaging Form field
+@mixin enfield($context: '') {
+	#{$context} .en__field {
+		@content;
+	}
+}
+
+// styles to be applied to a Engaging Form Block
+@mixin enform($context: '') {
+	#{$context} .en__component--formblock {
+		@content;
+	}
+}
+
+@mixin encontact($context: '') {
+	#{$context} .en__component--contactblock {
+		@content;
+	}
+}
+
+// Facebook share opt-ins
+// hide the field that storesthe result of what happened when the user was about to share the EN action to Facebook
+.en__field--NOT_TAGGED_51 {
+	display: none;
+}
+
+.en__field--NOT_TAGGED_52 > label {
+	display: none;
+}

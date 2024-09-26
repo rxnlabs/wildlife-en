@@ -1,0 +1,20 @@
+body.petition {
+	background-color: #353434;
+	@include encopy {
+		background: url('https://org.salsalabs.com/o/455/images/header-mountain.jpg') no-repeat;
+		background-size: cover;
+		padding: 20px;
+
+		> * {
+			max-width: 980px;
+
+			> {
+
+			}
+		}
+
+		@include block-elements('>') {
+			margin: 0 auto;
+		}
+	}
+}

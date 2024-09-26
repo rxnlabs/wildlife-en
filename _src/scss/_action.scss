@@ -1,0 +1,113 @@
+body.action {
+	background-color: #353434;
+
+	h1 {
+		color: #fff;
+	}
+
+	@include encopy {
+
+		&.background {
+			background: url('https://org.salsalabs.com/o/455/images/header-mountain.jpg') no-repeat;
+			background-size: cover;
+			color: #fff;
+			margin-top: 1px;
+			padding: unquote('42px *');
+		}
+
+		padding: 20px;
+
+		> * {
+			max-width: 980px;
+		}
+
+		@include block-elements('>') {
+			margin: 0 auto;
+		}
+
+		@include media('<tablet') {
+			margin-bottom: 0;
+		}
+	}
+
+	@include encontact {
+		max-width: 600px;
+		background-color: #fff;
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	@include enform {
+		max-width: 600px;
+		background-color: #fff;
+		margin: 0 auto;
+		padding: 20px;
+		.en__submit {
+			margin-top: 40px;
+
+			button {
+				color: #FFFFFF;
+				text-align: center;
+				background-color: #899AFC;
+				width: 100%;
+			}
+		}
+
+		@include media('>tablet') {
+			display: flex;
+			flex-direction: row;
+			flex: 1;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.en__field,
+			.en__submit {
+				width: 100%;
+			}
+
+			.en__field--firstName,
+			.en__field--lastName{
+				width: 48%;
+			}
+
+			.en__field--region,
+			.en__field--city {
+				width: 38%;
+			}
+
+			.en__field--postcode {
+				width: 20%;
+			}
+		}
+	}
+
+	select,
+	input[type=text],
+	input[type=email]{
+		color: #000;
+		background: #f3f1e4;
+		border: 1px solid #c8c8c6;
+		padding: 4px;
+		width: 100%;
+		border-radius: 3px;
+
+		&:focus {
+			background-color: #fff;
+		}
+	}
+
+	.disclaimer {
+		background-color: #fff;
+		color: #000;
+		font-style: italic;
+		font-weight: bold;
+	}
+
+
+	@include media('<tablet') {
+		footer {
+			margin-top: 0;
+		}
+	}
+
+}
